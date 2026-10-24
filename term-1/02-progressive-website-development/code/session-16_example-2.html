@@ -1,0 +1,26 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prime Café</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#3f2a1d">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- page content -->
+  <p id="net"></p>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', async () => {
+        try {
+          const reg = await navigator.serviceWorker.register('./sw.js');
+          console.log('Service worker registered for scope', reg.scope);
+        } catch (err) { console.error('SW registration failed', err); }
+      });
+    }
+    const net = document.querySelector('#net');
+    const show = () => net.textContent = navigator.onLine ? '🟢 Online' : '🔴 Offline – showing saved pages';
+    addEventListener('online', show); addEventListener('offline', show); show();
+  </script>
+</body>
