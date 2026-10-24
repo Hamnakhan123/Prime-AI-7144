@@ -1,0 +1,21 @@
+<style>
+  .gallery { display: flex; flex-wrap: wrap; gap: 1rem; }
+  figure { margin: 0; width: 240px; background: #fff; border-radius: 12px; overflow: hidden;
+           box-shadow: 0 6px 18px rgb(0 0 0 / .12); }
+  figure img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+               filter: grayscale(1); transition: filter .4s, transform .4s; }
+  figure:hover img { filter: grayscale(0); transform: scale(1.05); }
+  figcaption { padding: .6rem .8rem; font: 600 .9rem system-ui; }
+  .hero { height: 200px; display: grid; place-items: center; color: #fff;
+          background: linear-gradient(135deg, rgb(30 27 75 / .85), rgb(14 116 144 / .85)),
+                      url(https://picsum.photos/1200/400) center / cover; }
+</style>
+<section class="hero"><h1>Gallery</h1></section>
+<div class="gallery">
+  <figure><img src="https://picsum.photos/id/1015/600/450" alt="River between mountains" loading="lazy">
+    <figcaption>Hunza valley</figcaption></figure>
+  <figure><img src="https://picsum.photos/id/1043/600/450" alt="Forest path" loading="lazy">
+    <figcaption>Forest walk</figcaption></figure>
+  <figure><img src="https://picsum.photos/id/1067/600/450" alt="City at dusk" loading="lazy">
+    <figcaption>City lights</figcaption></figure>
+</div>
