@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prime Café – mobile first</title>
+  <style>
+    * { box-sizing: border-box; } body { margin: 0; font: 16px/1.6 system-ui, sans-serif; }
+    .bar { display: flex; justify-content: space-between; align-items: center; padding: .75rem 1rem; background: #3f2a1d; color: #fff; }
+    .menu-btn { font-size: 1.5rem; min-width: 48px; min-height: 48px; background: none; border: 0; color: inherit; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: none; }
+    nav.open ul { display: block; }
+    nav a { display: block; padding: .9rem 1rem; color: #fff; text-decoration: none; border-top: 1px solid #5b4030; }
+    .menu-grid { display: grid; gap: 1rem; padding: 1rem; }
+    .item { border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; }
+    .item img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+    .item div { padding: .75rem; }
+    @media (min-width: 640px)  { .menu-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1024px) {
+      .menu-btn { display: none; }
+      nav ul { display: flex; } nav a { border: 0; }
+      .menu-grid { grid-template-columns: repeat(4, 1fr); max-width: 1200px; margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <strong>Prime Café</strong>
+    <nav id="nav">
+      <button class="menu-btn" aria-expanded="false" aria-controls="links" aria-label="Menu">☰</button>
+      <ul id="links"><li><a href="#">Menu</a></li><li><a href="#">Order</a></li><li><a href="#">Visit</a></li></ul>
+    </nav>
+  </header>
+  <main class="menu-grid">
+    <article class="item"><img src="https://picsum.photos/id/1060/400/300" alt="Cappuccino" loading="lazy"><div>Cappuccino – Rs 550</div></article>
+    <article class="item"><img src="https://picsum.photos/id/425/400/300" alt="Espresso" loading="lazy"><div>Espresso – Rs 450</div></article>
+    <article class="item"><img src="https://picsum.photos/id/766/400/300" alt="Iced latte" loading="lazy"><div>Iced latte – Rs 650</div></article>
+    <article class="item"><img src="https://picsum.photos/id/312/400/300" alt="Pastry" loading="lazy"><div>Croissant – Rs 400</div></article>
+  </main>
+  <script>
+    const nav = document.querySelector('#nav'), btn = nav.querySelector('.menu-btn');
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
