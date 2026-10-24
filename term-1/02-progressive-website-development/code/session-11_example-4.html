@@ -1,0 +1,43 @@
+<style>
+  .done { text-decoration: line-through; color: #94a3b8; }
+  li { cursor: pointer; padding: .3rem 0; }
+  .del { margin-left: .5rem; }
+</style>
+<h1>To-do</h1>
+<form id="todo-form">
+  <input id="task" placeholder="New task" required>
+  <button>Add</button>
+</form>
+<p id="count"></p>
+<ul id="list"></ul>
+
+<script>
+  const form = document.querySelector('#todo-form');
+  const input = document.querySelector('#task');
+  const list = document.querySelector('#list');
+  const count = document.querySelector('#count');
+
+  function updateCount() {
+    const left = list.querySelectorAll('li:not(.done)').length;
+    count.textContent = `${left} task${left === 1 ? '' : 's'} left`;
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();                    // stop the page reloading
+    const li = document.createElement('li');
+    li.textContent = input.value.trim();
+    const del = document.createElement('button');
+    del.textContent = '✕'; del.className = 'del'; del.setAttribute('aria-label', 'Delete task');
+    li.append(del);
+    list.append(li);
+    input.value = ''; input.focus();
+    updateCount();
+  });
+
+  list.addEventListener('click', e => {    // one listener for all items (delegation)
+    if (e.target.matches('.del')) e.target.parentElement.remove();
+    else if (e.target.matches('li')) e.target.classList.toggle('done');
+    updateCount();
+  });
+  updateCount();
+</script>
