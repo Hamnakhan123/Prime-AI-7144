@@ -1,0 +1,25 @@
+<style>
+  .wrap { overflow-x: auto; }
+  table { border-collapse: collapse; min-width: 560px; font-family: system-ui; }
+  caption { font-weight: 700; margin-bottom: .5rem; text-align: left; }
+  th, td { border: 1px solid #cbd5e1; padding: .5rem .75rem; text-align: center; }
+  thead th { background: #1e1b4b; color: #fff; position: sticky; top: 0; }
+  tbody tr:nth-child(even) { background: #f1f5f9; }
+  tbody tr:hover { background: #e0f2fe; }
+  .break { background: #fef3c7; font-style: italic; }
+</style>
+<div class="wrap">
+<table>
+  <caption>Term 1 – Weekly timetable</caption>
+  <colgroup><col style="width: 120px"><col span="3"></colgroup>
+  <thead>
+    <tr><th scope="col">Time</th><th scope="col">Monday</th><th scope="col">Wednesday</th><th scope="col">Friday</th></tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">09:00</th><td rowspan="2">HTML5 lab</td><td>CSS3</td><td>JavaScript</td></tr>
+    <tr><th scope="row">10:00</th><td>Flexbox</td><td>Project</td></tr>
+    <tr><th scope="row">11:00</th><td colspan="3" class="break">Break</td></tr>
+  </tbody>
+  <tfoot><tr><td colspan="4">Total: 6 contact hours</td></tr></tfoot>
+</table>
+</div>
