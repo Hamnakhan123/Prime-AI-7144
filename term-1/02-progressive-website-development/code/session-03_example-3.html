@@ -1,0 +1,10 @@
+<head>
+  <link rel="stylesheet" href="css/style.css">  <!-- says: p { color: navy; } -->
+  <style>
+    p { color: green; }                           /* internal, comes later -> wins over external */
+  </style>
+</head>
+<body>
+  <p>I am green.</p>
+  <p style="color: crimson;">I am crimson (inline beats both).</p>
+</body>
