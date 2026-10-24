@@ -1,0 +1,25 @@
+<style>
+  :root { --brand: #0e7490; --ink: #0f172a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, sans-serif; }
+  .hero {
+    min-height: 100vh; min-height: 100dvh;          /* fallback, then dynamic unit */
+    display: grid; place-items: center; text-align: center; padding: 2rem;
+    color: #fff;
+    background: linear-gradient(rgb(15 23 42 / .65), rgb(15 23 42 / .65)),
+                url(https://picsum.photos/id/1018/1600/900) center / cover;
+  }
+  .hero h1 { font-size: clamp(2rem, 1rem + 5vw, 4.5rem); margin: 0 0 .5rem; }
+  .hero p  { font-size: clamp(1rem, .9rem + .6vw, 1.35rem); max-width: min(60ch, 90vw); margin-inline: auto; }
+  .btn { display: inline-block; margin-top: 1.5rem; padding: .9rem 1.8rem; border-radius: 999px;
+         background: var(--brand); color: #fff; text-decoration: none; }
+  .scroll { position: absolute; bottom: 2vh; left: 50%; translate: -50% 0; }
+</style>
+<section class="hero">
+  <div>
+    <h1>Build the web of tomorrow</h1>
+    <p>Hands-on HTML5, CSS3 and JavaScript – from your first tag to an installable web app.</p>
+    <a class="btn" href="#start">Start learning</a>
+  </div>
+  <span class="scroll">↓</span>
+</section>
