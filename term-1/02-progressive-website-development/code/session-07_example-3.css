@@ -1,0 +1,17 @@
+.panel { container-type: inline-size; }
+.profile { display: grid; gap: 1rem; }
+@container (min-width: 420px) {
+  .profile { grid-template-columns: 120px 1fr; align-items: center; }
+}
+.profile:has(.badge) { border: 2px solid gold; }          /* only cards that contain a badge */
+form:has(:invalid) button[type="submit"] { opacity: .5; pointer-events: none; }
+
+:root { --bg: #ffffff; --text: #0f172a; }
+@media (prefers-color-scheme: dark) { :root { --bg: #0f172a; --text: #e2e8f0; } }
+body { background: var(--bg); color: var(--text); }
+
+.menu {
+  display: flex; gap: 1rem;
+  & a { color: var(--text); }
+  @media (width < 600px) { flex-direction: column; }
+}
