@@ -1,0 +1,17 @@
+<style>
+  header { position: sticky; top: 0; background: #1e1b4b; color: #fff; padding: .75rem; z-index: 10; }
+  .card { position: relative; width: 220px; padding: 1rem; border: 1px solid #ccc; margin: 1rem; }
+  .badge { position: absolute; top: -10px; right: -10px; background: crimson; color: #fff;
+           border-radius: 999px; padding: .2rem .6rem; font-size: .8rem; }
+  .help { position: fixed; bottom: 20px; right: 20px; background: #0e7490; color: #fff;
+          padding: .8rem 1rem; border-radius: 999px; }
+  .story img { float: left; width: 120px; margin: 0 1rem .5rem 0; }
+  .story::after { content: ""; display: block; clear: both; }   /* clearfix */
+  .nudge { position: relative; left: 20px; }
+</style>
+<header>Sticky header – scroll me</header>
+<div class="card">New course <span class="badge">NEW</span></div>
+<p class="nudge">This paragraph is nudged 20px right but keeps its original space.</p>
+<div class="story"><img src="https://picsum.photos/120" alt="Sample">
+  <p>Text wraps around the floated image on its right side ...</p></div>
+<a class="help" href="#">Need help?</a>
