@@ -1,0 +1,28 @@
+<style>
+  .board { display: flex; gap: 1rem; } .col { flex: 1; min-height: 140px; padding: .5rem; background: #f1f5f9; border-radius: 8px; }
+  .task { padding: .5rem; margin: .4rem 0; background: #fff; border-radius: 6px; cursor: grab; }
+  .reveal { opacity: 0; transform: translateY(20px); transition: .6s; } .reveal.show { opacity: 1; transform: none; }
+</style>
+<div class="board">
+  <div class="col" data-col="todo"><h3>To do</h3><div class="task" draggable="true" id="t1">Design hero</div></div>
+  <div class="col" data-col="done"><h3>Done</h3></div>
+</div>
+<button id="copy">Copy invite link</button>
+<p class="reveal">I fade in when scrolled into view.</p>
+<script>
+  document.querySelectorAll('.task').forEach(t =>
+    t.addEventListener('dragstart', e => e.dataTransfer.setData('text/plain', t.id)));
+  document.querySelectorAll('.col').forEach(col => {
+    col.addEventListener('dragover', e => e.preventDefault());      // allow dropping
+    col.addEventListener('drop', e => col.append(document.getElementById(e.dataTransfer.getData('text/plain'))));
+  });
+
+  document.querySelector('#copy').addEventListener('click', async e => {
+    await navigator.clipboard.writeText('https://prime.example.com/invite/ABC123');
+    e.target.textContent = 'Copied ✓';
+  });
+
+  const io = new IntersectionObserver(entries =>
+    entries.forEach(en => en.isIntersecting && en.target.classList.add('show')), { threshold: .3 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
