@@ -9,7 +9,7 @@ Term 1 builds the foundations every software engineer needs: professional produc
 | # | Module | Sessions | Status |
 |---|---|---|---|
 | 1 | [Effective Productivity through Office Automation](01-office-automation/README.md)<br><sub>Windows 11, Word, Excel, PowerPoint, OneNote, Outlook, Teams, OneDrive and AI assistants</sub> | 13 | ✅ Ready |
-| 2 | Progressive Website Development (HTML5, CSS3, JavaScript) | — | 🚧 Coming soon |
+| 2 | [Progressive Website Development (HTML5, CSS3, JavaScript)](02-progressive-website-development/README.md)<br><sub>HTML5, CSS3, Flexbox & Grid, JavaScript (ES2022), Canvas, Web Storage, Geolocation, mobile-first and PWAs</sub> | 16 | ✅ Ready |
 | 3 | Bootstrap & jQuery for Responsive Web Pages | — | 🚧 Coming soon |
 | 4 | Optimize Web for Search Engines | — | 🚧 Coming soon |
 | 5 | Distributed Version Control with Git & GitHub | — | 🚧 Coming soon |
