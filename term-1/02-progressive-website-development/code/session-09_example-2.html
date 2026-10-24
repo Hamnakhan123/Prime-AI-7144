@@ -1,0 +1,19 @@
+<style>
+  video, .yt { width: 100%; max-width: 720px; height: auto; aspect-ratio: 16 / 9; border-radius: 12px; }
+</style>
+<video controls preload="metadata" poster="https://picsum.photos/id/1060/1280/720">
+  <source src="media/intro.webm" type="video/webm">
+  <source src="media/intro.mp4" type="video/mp4">
+  <track kind="captions" src="media/intro.en.vtt" srclang="en" label="English" default>
+  <track kind="subtitles" src="media/intro.ur.vtt" srclang="ur" label="اردو">
+  <p>Your browser cannot play this video. <a href="media/intro.mp4">Download the MP4</a>.</p>
+</video>
+
+<audio controls preload="none">
+  <source src="media/podcast.opus" type="audio/ogg; codecs=opus">
+  <source src="media/podcast.mp3" type="audio/mpeg">
+  <a href="media/podcast.mp3">Download the episode</a>
+</audio>
+
+<iframe class="yt" src="https://www.youtube-nocookie.com/embed/UB1O30fR-EE"
+        title="HTML crash course" loading="lazy" allowfullscreen></iframe>
