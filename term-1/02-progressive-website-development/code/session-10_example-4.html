@@ -1,0 +1,25 @@
+<label>First number <input id="a" type="number" value="12"></label>
+<label>Operator
+  <select id="op"><option>+</option><option>-</option><option>*</option><option>/</option><option>%</option></select>
+</label>
+<label>Second number <input id="b" type="number" value="5"></label>
+<button id="calc">=</button>
+<p>Result: <output id="out">?</output></p>
+
+<script>
+  document.querySelector('#calc').addEventListener('click', () => {
+    const a = Number(document.querySelector('#a').value);   // input values are strings
+    const b = Number(document.querySelector('#b').value);
+    const op = document.querySelector('#op').value;
+    let result;
+    switch (op) {
+      case '+': result = a + b; break;
+      case '-': result = a - b; break;
+      case '*': result = a * b; break;
+      case '/': result = b === 0 ? 'Cannot divide by zero' : a / b; break;
+      case '%': result = a % b; break;
+    }
+    document.querySelector('#out').textContent = result;
+    console.log(`${a} ${op} ${b} =`, result);
+  });
+</script>
