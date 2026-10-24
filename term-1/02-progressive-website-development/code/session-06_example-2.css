@@ -1,0 +1,8 @@
+.cards { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.card  { flex: 1 1 250px;          /* grow, shrink, start at 250px */
+         display: flex; flex-direction: column;
+         padding: 1.25rem; border: 1px solid #e5e7eb; border-radius: 12px; }
+.card p { flex-grow: 1; }          /* pushes the button to the bottom */
+.card .btn { align-self: flex-start; }
+.card.featured { order: -1; }      /* shown first visually */
+.center-box { display: flex; justify-content: center; align-items: center; min-height: 50vh; }
