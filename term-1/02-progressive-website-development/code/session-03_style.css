@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }                    /* universal */
+body { font-family: system-ui, sans-serif; margin: 0; color: #1f2937; }   /* element */
+h1, h2 { font-family: Georgia, serif; }           /* grouping */
+#hero { background: #3f2a1d; color: #fff; padding: 1.5rem; }   /* id */
+#hero nav a { color: #fde68a; margin-right: 1rem; }            /* descendant */
+h2 + p { font-size: 1.15rem; }                    /* adjacent sibling */
+.note { font-style: italic; color: #6b7280; }     /* class */
+.menu > li { padding: .4rem 0; }                  /* child */
+.menu li:nth-child(odd) { background: #fef3c7; }  /* pseudo-class */
+.featured::after { content: " ★ bestseller"; color: #b45309; }   /* pseudo-element */
+a[href$=".pdf"]::before { content: "📄 "; }      /* attribute */
+
+/* links: LoVe HAte order */
+a:link    { color: #fde68a; }
+a:visited { color: #fcd34d; }
+a:hover   { text-decoration: underline wavy; }
+a:active  { color: #fff; }
+a:focus-visible { outline: 3px solid #fbbf24; outline-offset: 2px; }
