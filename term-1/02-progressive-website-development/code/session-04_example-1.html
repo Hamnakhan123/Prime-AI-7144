@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; line-height: 1.6; margin: 0; background: #f8fafc; }
+    article {
+      max-width: 680px; margin: 2rem auto;           /* centred */
+      padding: 2rem; background: #fff;
+      border: 1px solid #e2e8f0; border-radius: 12px;
+      box-shadow: 0 4px 14px rgb(0 0 0 / .06);
+    }
+    h1 { font-family: "Merriweather", Georgia, serif; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; }
+    .meta { text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; color: #64748b; }
+    p + p { text-indent: 2em; }                       /* indent following paragraphs */
+    .highlight { background: #fef08a; padding: 0 .2em; border-radius: 3px; }
+    blockquote { margin: 1.5rem 0; padding: .5rem 1rem; border-left: 4px solid #0e7490; color: #334155; }
+    a { color: #0e7490; }
+    a:hover, a:focus-visible { color: #155e75; text-decoration-thickness: 3px; }
+  </style>
+</head>
+<body>
+  <article>
+    <p class="meta">24 Oct 2026 · 4 min read</p>
+    <h1>Why every developer should learn CSS properly</h1>
+    <p>Frameworks come and go, but <span class="highlight">the box model is forever</span>.</p>
+    <p>Once you understand padding, borders and margins, layouts stop feeling like magic.</p>
+    <blockquote>Good design is as little design as possible.</blockquote>
+    <p>Read more on <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">MDN Learn CSS</a>.</p>
+  </article>
+</body>
+</html>
