@@ -1,0 +1,26 @@
+<style>
+  body { margin: 0; font-family: system-ui; }
+  .page { display: grid; min-height: 100vh; gap: 1rem;
+          grid-template-columns: 1fr;
+          grid-template-areas: "header" "main" "sidebar" "footer"; }
+  @media (min-width: 800px) {
+    .page { grid-template-columns: 240px 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: "header header" "sidebar main" "footer footer"; }
+  }
+  header  { grid-area: header;  background: #1e1b4b; color: #fff; padding: 1rem; }
+  aside   { grid-area: sidebar; background: #e0e7ff; padding: 1rem; }
+  main    { grid-area: main;    padding: 1rem; }
+  footer  { grid-area: footer;  background: #f1f5f9; padding: 1rem; }
+  .gallery { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+  .gallery .wide { grid-column: span 2; }
+  .gallery div { background: #c7d2fe; padding: 2rem; border-radius: 8px; }
+</style>
+<div class="page">
+  <header>Header</header>
+  <aside>Sidebar links</aside>
+  <main><h1>Main content</h1>
+    <div class="gallery"><div class="wide">1 (span 2)</div><div>2</div><div>3</div><div>4</div><div>5</div></div>
+  </main>
+  <footer>Footer</footer>
+</div>
