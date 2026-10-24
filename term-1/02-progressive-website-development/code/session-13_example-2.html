@@ -1,0 +1,26 @@
+<canvas id="game" width="500" height="260" style="background:#0f172a"></canvas>
+<p>Click the ball to change its colour. Score: <span id="score">0</span></p>
+<script>
+  const cv = document.querySelector('#game'), ctx = cv.getContext('2d');
+  const ball = { x: 80, y: 60, r: 18, dx: 3, dy: 2.4, color: '#67e8f9' };
+  let score = 0;
+
+  function loop() {
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ball.x += ball.dx; ball.y += ball.dy;
+    if (ball.x < ball.r || ball.x > cv.width - ball.r) ball.dx *= -1;   // bounce off walls
+    if (ball.y < ball.r || ball.y > cv.height - ball.r) ball.dy *= -1;
+    ctx.fillStyle = ball.color;
+    ctx.beginPath(); ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2); ctx.fill();
+    requestAnimationFrame(loop);
+  }
+  cv.addEventListener('click', e => {
+    const rect = cv.getBoundingClientRect();
+    const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    if (Math.hypot(mx - ball.x, my - ball.y) <= ball.r) {
+      ball.color = `hsl(${Math.random() * 360} 80% 60%)`;
+      document.querySelector('#score').textContent = ++score;
+    }
+  });
+  loop();
+</script>
