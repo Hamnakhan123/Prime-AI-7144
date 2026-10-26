@@ -17,7 +17,7 @@ By the end of this session you will be able to:
 - Describe what PowerPoint is used for and the principles of a good presentation.
 - Identify the PowerPoint window, views and slide layouts.
 - Create a presentation from a blank deck, a theme or a template.
-- Add text, images, tables and charts; use Slide Master for consistency; deliver with Presenter View.
+- Add text, images, tables and charts; use Slide Master for consistency; deliver with Speaker View.
 
 ## 📖 Concepts
 
@@ -36,7 +36,7 @@ You will present project proposals, sprint demos, capstone defences and job-inte
 |---|---|
 | Slide thumbnails pane | Reorder, duplicate (`Ctrl+D`), hide slides |
 | Slide pane | Edit the current slide |
-| Notes pane | Speaker notes – visible only to you in Presenter View |
+| Notes pane | Speaker notes – visible only to you in Speaker View |
 | Views | Normal, Outline, Slide Sorter, Notes Page, Reading View, Slide Show |
 | Status bar | Notes, comments, view buttons, zoom |
 
@@ -52,7 +52,7 @@ Tables, Charts (opens a mini Excel sheet), SmartArt, Pictures, Icons, Video/Audi
 
 ### Delivering
 - `F5` from start, `Shift+F5` from current slide.
-- **Presenter View**: current slide, next slide, notes, timer, pen and laser tools.
+- **Speaker View** (the private screen PowerPoint shows on your laptop while the audience sees only the slide): current slide, next slide, notes, timer, pen and laser tools.
 - `B` black screen, `W` white screen, type a slide number + `Enter` to jump.
 - **Rehearse with Coach** gives feedback on pace, filler words and reading the slide.
 - Export: PDF, video (MP4), or *Package Presentation for CD* (embeds media).
@@ -137,7 +137,7 @@ Within 5 minutes? True
 | Outline | Writing/restructuring text quickly |
 | Slide Sorter | Reordering and transitions overview |
 | Notes Page | Printing speaker notes |
-| Presenter View | Delivering the talk |
+| Speaker View | Delivering the talk |
 
 ## 🧪 Lab / practice tasks
 
@@ -188,7 +188,7 @@ Slide Show › Rehearse with Coach (Microsoft 365).
 
 </details>
 
-**Q2. Speaker notes are visible to the audience in Presenter View.**
+**Q2. Speaker notes are visible to the audience in Speaker View.**
 
 - A) True
 - B) False
@@ -197,7 +197,7 @@ Slide Show › Rehearse with Coach (Microsoft 365).
 
 <details><summary>Show answer</summary>
 
-**B** — Only the presenter sees them.
+**B** — Only the speaker sees them.
 
 </details>
 
@@ -244,7 +244,7 @@ Slide Show › Rehearse with Coach (Microsoft 365).
 
 - One idea per slide, big fonts, visuals over text, headline states the point.
 - Theme → Slide Master → layouts → slides; use placeholders.
-- Ctrl+M new slide, F5/Shift+F5 to present, Presenter View with notes and timer.
+- Ctrl+M new slide, F5/Shift+F5 to present, Speaker View with notes and timer.
 - Designer suggests layouts; Rehearse with Coach improves delivery.
 
 ## 🎤 Interview / viva questions
@@ -263,10 +263,10 @@ Slide Show › Rehearse with Coach (Microsoft 365).
 
    </details>
 
-3. **What is Presenter View?**
+3. **What is Speaker View?**
    <details><summary>Model answer</summary>
 
-   A private presenter screen showing current and next slides, notes, timer and tools while the audience sees only the slide.
+   A private speaker screen showing current and next slides, notes, timer and tools while the audience sees only the slide.
 
    </details>
 
