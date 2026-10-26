@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello jQuery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>.highlight { background: #fcd34d; padding: .25rem .5rem; border-radius: .25rem; }</style>
+</head>
+<body class="container py-5">
+  <h1 id="title">Hello, world</h1>
+  <p class="intro">This paragraph will change when you click the buttons.</p>
+  <button id="greet" class="btn btn-primary">Greet</button>
+  <button id="reset" class="btn btn-outline-secondary">Reset</button>
+
+  <!-- 1. jQuery must load BEFORE our script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+  <script>
+    // 2. Wait for the DOM to be ready (short form of $(document).ready)
+    $(function () {
+      const original = $('#title').text();          // getter: read the current text
+
+      // 3. Attach a click handler with .on()
+      $('#greet').on('click', function () {
+        $('#title').text('Assalam-o-Alaikum, jQuery!')   // setter
+                   .addClass('highlight');               // chaining on the same object
+        $('.intro').text('You clicked Greet – the heading changed and got a class.');
+        $(this).prop('disabled', true);                  // `this` = the button that was clicked
+      });
+
+      $('#reset').on('click', function () {
+        $('#title').text(original).removeClass('highlight');
+        $('.intro').text('Back to the start.');
+        $('#greet').prop('disabled', false);
+      });
+    });
+  </script>
+</body>
+</html>
