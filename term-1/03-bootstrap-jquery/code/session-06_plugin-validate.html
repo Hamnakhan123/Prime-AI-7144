@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Validation plugin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+  <main class="container py-4" style="max-width: 560px">
+    <h1 class="h3">Workshop sign-up</h1>
+    <form id="workshop" novalidate>
+      <div class="mb-3">
+        <label for="wName" class="form-label">Name</label>
+        <input id="wName" name="wName" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="wEmail" class="form-label">Email</label>
+        <input id="wEmail" name="wEmail" type="email" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="wSeats" class="form-label">Seats (1–4)</label>
+        <input id="wSeats" name="wSeats" type="number" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="wCode" class="form-label">Student code</label>
+        <input id="wCode" name="wCode" class="form-control" placeholder="e.g. KHI-2041">
+      </div>
+      <button class="btn btn-primary">Reserve</button>
+    </form>
+    <div id="done" class="alert alert-success d-none mt-3"></div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+  <!-- 1. Plugin AFTER jQuery, pinned version + SRI -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"
+          integrity="sha384-INLNT6YPpjCRFM2xpOexEE3T4i2mIigf+Kr19b7a59RFtrVBZQzZWXkGuiMA/q1r" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      // 2. A custom rule: student codes look like ABC-1234
+      $.validator.addMethod('studentCode', (value, el) => /^[A-Z]{3}-\d{4}$/.test(value),
+        'Format: three capital letters, a dash and four digits.');
+
+      // 3. Initialise with rules, messages and Bootstrap-friendly options
+      $('#workshop').validate({
+        rules: {
+          wName: { required: true, minlength: 3 },
+          wEmail: { required: true, email: true },
+          wSeats: { required: true, digits: true, range: [1, 4] },
+          wCode: { required: true, studentCode: true },
+        },
+        messages: {
+          wName: { required: 'Tell us your name.', minlength: 'At least {0} characters.' },
+          wSeats: { range: 'Choose between {0} and {1} seats.' },
+        },
+        errorClass: 'is-invalid',               // Bootstrap's red border
+        validClass: 'is-valid',                 // Bootstrap's green border
+        errorElement: 'div',
+        errorPlacement: (error, element) => error.addClass('invalid-feedback').insertAfter(element),
+        submitHandler: form => {                // runs only when every rule passes
+          $('#done').removeClass('d-none').text(`Reserved ${$('#wSeats').val()} seat(s) for ${$('#wName').val()}.`);
+          $(form).addClass('d-none');
+        },
+      });
+    });
+  </script>
+</body>
+</html>
