@@ -1,0 +1,8 @@
+# robots.txt for karachitutors.pk
+User-agent: *
+Disallow: /admin/
+
+User-agent: BadBot
+Disallow: /
+
+Sitemap: https://karachitutors.pk/sitemap.xml
