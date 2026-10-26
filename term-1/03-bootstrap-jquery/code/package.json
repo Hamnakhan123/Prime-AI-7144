@@ -1,0 +1,12 @@
+{
+  "name": "bootstrap-jquery-module-code",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Runnable examples for the Bootstrap & jQuery module. Run npm install once, then node <file>.js",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "3.7.1",
+    "jquery-validation": "1.21.0",
+    "jsdom": "24.1.3"
+  }
+}
