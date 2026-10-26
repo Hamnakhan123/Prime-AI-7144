@@ -1,0 +1,11 @@
+{
+  "name": "bakery-ci-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Small project used to demonstrate CI/CD with GitHub Actions",
+  "scripts": {
+    "lint": "node scripts/lint.js",
+    "test": "node --test --test-reporter=spec"
+  },
+  "license": "MIT"
+}
