@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI widgets</title>
+  <!-- jQuery UI theme CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; }
+    #priorities li { cursor: grab; padding: .5rem; margin: .25rem 0; background: #f5f3ff; border: 1px solid #a78bfa; list-style: none; }
+  </style>
+</head>
+<body>
+  <h1>jQuery UI playground</h1>
+
+  <!-- TABS widget: a list of links to panel ids -->
+  <div id="tabs">
+    <ul>
+      <li><a href="#t-date">Datepicker</a></li>
+      <li><a href="#t-sort">Sortable</a></li>
+      <li><a href="#t-dialog">Dialog</a></li>
+    </ul>
+
+    <div id="t-date">
+      <label for="exam">Exam date: </label>
+      <input id="exam" placeholder="click to choose">
+      <p>You picked: <strong id="picked">nothing yet</strong></p>
+    </div>
+
+    <div id="t-sort">
+      <p>Drag to order your study priorities:</p>
+      <ul id="priorities">
+        <li>Bootstrap grid</li><li>jQuery events</li><li>Effects</li><li>Plugins</li>
+      </ul>
+      <p>Current order: <span id="order"></span></p>
+    </div>
+
+    <div id="t-dialog">
+      <button id="open-dialog">Delete my draft…</button>
+      <p id="dialog-result"></p>
+    </div>
+  </div>
+
+  <!-- The dialog's content is hidden until .dialog() opens it -->
+  <div id="confirm" title="Delete draft?">
+    <p>This cannot be undone. Are you sure?</p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $('#tabs').tabs();                                      // 1. Tabs
+
+      $('#exam').datepicker({                                 // 2. Datepicker with options
+        dateFormat: 'dd/mm/yy',
+        minDate: 0,                                           // no past dates
+        beforeShowDay: d => [d.getDay() !== 0, ''],           // Sundays disabled
+        onSelect: text => $('#picked').text(text)
+      });
+
+      const showOrder = () => $('#order').text($('#priorities li').map((i, li) => $(li).text()).get().join(' → '));
+      $('#priorities').sortable({ update: showOrder });       // 3. Sortable + update event
+      showOrder();
+
+      $('#confirm').dialog({                                  // 4. Dialog (modal, not opened yet)
+        autoOpen: false, modal: true, width: 360,
+        buttons: {
+          Delete: function () { $('#dialog-result').text('Draft deleted.'); $(this).dialog('close'); },
+          Cancel: function () { $(this).dialog('close'); $('#open-dialog').effect('shake'); }   // 5. effect
+        }
+      });
+      $('#open-dialog').on('click', () => $('#confirm').dialog('open'));
+    });
+  </script>
+</body>
+</html>
