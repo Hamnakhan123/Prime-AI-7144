@@ -45,7 +45,7 @@ call recording and live subtitles. Teams keeps all of these and adds structured 
 
 ### Meeting features
 Lobby, mute all, raise hand, reactions, **breakout rooms**, live captions and **transcription**, recording, whiteboard,
-**Together mode**, polls (Forms), PowerPoint Live (presenter notes stay private), meeting notes, and (licence) Copilot
+**Together mode**, polls (Forms), PowerPoint Live (speaker notes stay private), meeting notes, and (licence) Copilot
 summaries with action items.
 
 ### Online etiquette checklist
@@ -273,10 +273,10 @@ Use the table above as a starting point.
 
    </details>
 
-3. **How can you keep presenter notes private in Teams?**
+3. **How can you keep speaker notes private in Teams?**
    <details><summary>Model answer</summary>
 
-   Use PowerPoint Live, which shows notes only to the presenter.
+   Use PowerPoint Live, which shows notes only to the speaker.
 
    </details>
 
