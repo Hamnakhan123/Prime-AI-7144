@@ -1,0 +1,44 @@
+/* style.css – Indus Logistics brand layer on top of Bootstrap 5.3 */
+
+/* 1. Brand colour defined once, reused everywhere */
+:root {
+  --brand: #ea580c;            /* warm orange */
+  --brand-dark: #c2410c;
+  --bs-link-color-rgb: 194, 65, 12;
+  --bs-link-hover-color-rgb: 154, 52, 18;
+}
+
+.text-brand { color: var(--brand) !important; }
+
+/* 2. A custom button that behaves like Bootstrap's own (uses Bootstrap's button CSS variables) */
+.btn-brand {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--brand-dark);
+  --bs-btn-hover-border-color: var(--brand-dark);
+  --bs-btn-focus-shadow-rgb: 234, 88, 12;
+  --bs-btn-active-bg: var(--brand-dark);
+}
+
+/* 3. Hero with a gradient over a photo; min-height adapts to the screen */
+.hero {
+  min-height: 70vh;
+  background: linear-gradient(120deg, rgba(10, 7, 22, .85), rgba(234, 88, 12, .55)),
+              url("https://picsum.photos/id/1071/1600/900") center / cover no-repeat;
+}
+
+/* 4. Service details are hidden until jQuery slides them open */
+.service .details { display: none; }
+
+/* 5. Back-to-top button */
+#toTop { position: fixed; right: 1rem; bottom: 1rem; display: none; z-index: 1030; }
+
+/* 6. Sections land below the sticky navbar when jumped to */
+section[id] { scroll-margin-top: 72px; }
+
+/* 7. Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
