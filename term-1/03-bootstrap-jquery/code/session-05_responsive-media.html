@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive media</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    .thumb { height: 180px; width: 100%; object-fit: cover; }   /* crop to fill, never stretch */
+  </style>
+</head>
+<body>
+  <main class="container py-4">
+    <h1 class="h3">Responsive media</h1>
+
+    <!-- 1. srcset + sizes: half width from lg, full width below -->
+    <div class="row g-4 align-items-center mb-5">
+      <div class="col-lg-6">
+        <img class="img-fluid rounded"
+             src="https://picsum.photos/id/1048/800/450"
+             srcset="https://picsum.photos/id/1048/480/270 480w,
+                     https://picsum.photos/id/1048/800/450 800w,
+                     https://picsum.photos/id/1048/1200/675 1200w,
+                     https://picsum.photos/id/1048/1600/900 1600w"
+             sizes="(min-width: 992px) 50vw, 100vw"
+             width="1600" height="900" alt="City skyline at dusk" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="h5">srcset + sizes</h2>
+        <p>On a 390 px phone with DPR 3 the browser needs 1170 px → downloads the 1200w file.
+           On a 1440 px laptop with DPR 1 the slot is 720 px → downloads the 800w file.</p>
+      </div>
+    </div>
+
+    <!-- 2. picture: square crop for phones, wide crop for larger screens -->
+    <h2 class="h5">picture (art direction)</h2>
+    <picture>
+      <source media="(max-width: 575.98px)" srcset="https://picsum.photos/id/1015/600/600">
+      <source media="(min-width: 576px)" srcset="https://picsum.photos/id/1015/1400/500">
+      <img src="https://picsum.photos/id/1015/1400/500" class="img-fluid rounded mb-5" alt="River valley" width="1400" height="500">
+    </picture>
+
+    <!-- 3. object-fit: images of different shapes become equal thumbnails -->
+    <h2 class="h5">object-fit: cover</h2>
+    <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+      <div class="col"><img class="thumb rounded" src="https://picsum.photos/id/1025/300/600" alt="Tall photo of a dog"></div>
+      <div class="col"><img class="thumb rounded" src="https://picsum.photos/id/1035/900/300" alt="Wide waterfall"></div>
+      <div class="col"><img class="thumb rounded" src="https://picsum.photos/id/1041/500/500" alt="Square city photo"></div>
+      <div class="col"><img class="thumb rounded" src="https://picsum.photos/id/1050/800/500" alt="Seaside"></div>
+    </div>
+
+    <!-- 4. ratio: a video that always keeps 16:9 -->
+    <h2 class="h5">Responsive video</h2>
+    <div class="ratio ratio-16x9 col-lg-8">
+      <iframe src="https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ" title="Sample video" loading="lazy"
+              allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
