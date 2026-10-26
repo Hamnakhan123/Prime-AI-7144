@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TODO (Milestone 5): rewrite the title (50–60 chars) and description (120–160 chars) for YOUR project -->
+  <title>About Us – Our Story, Team and Mission | Project Name</title>
+  <meta name="description" content="Learn who we are, why we started and the team behind the project. Meet the people, read our mission and see the milestones that brought us here.">
+  <link rel="canonical" href="https://your-username.github.io/your-repo/about.html">
+  <meta property="og:title" content="About Us – Our Story, Team and Mission | Project Name">
+  <meta property="og:description" content="Learn who we are, why we started and the team behind the project. Meet the people, read our mission and see the milestones that brought us here.">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#main">Skip to main content</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-brand sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/img/logo.svg" alt="" width="32" height="32"> Project Name
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogue.html">Catalogue</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <button id="themeToggle" class="btn btn-sm btn-outline-light ms-lg-3" type="button" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <section class="container py-5">
+      <h1>About us</h1>
+      <p class="lead">TODO (Milestone 2): two or three paragraphs about the organisation your website represents.</p>
+      <div class="row g-4 mt-2">
+        <div class="col-md-6">
+          <img src="assets/img/placeholder.svg" class="img-fluid rounded" alt="TODO: describe the photo you place here" width="800" height="500" loading="lazy">
+        </div>
+        <div class="col-md-6">
+          <h2 class="h4">Our mission</h2>
+          <p>TODO: mission statement.</p>
+          <h2 class="h4">Milestones</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">2024 – TODO</li>
+            <li class="list-group-item">2025 – TODO</li>
+            <li class="list-group-item">2026 – TODO</li>
+          </ul>
+        </div>
+      </div>
+      <h2 class="mt-5 mb-3">Frequently asked questions</h2>
+      <div class="accordion" id="faq">
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">TODO question one?</button></h3>
+          <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">TODO answer.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">TODO question two?</button></h3>
+          <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">TODO answer.</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-light py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <p class="mb-0">&copy; <span id="year">2026</span> Project Name · Team members: TODO</p>
+      <p class="mb-0"><a class="link-light" href="contact.html">Contact us</a></p>
+    </div>
+  </footer>
+  <button id="toTop" class="btn btn-brand rounded-circle" type="button" aria-label="Back to top">↑</button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
