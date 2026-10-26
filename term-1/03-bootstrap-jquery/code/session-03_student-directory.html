@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student directory</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+  <main class="container py-4" style="max-width: 720px">
+    <h1 class="h3">Student directory</h1>
+    <input id="search" class="form-control mb-3" type="search" placeholder="Search by name…" aria-label="Search students">
+    <div id="filters" class="btn-group mb-3" role="group" aria-label="Filter by programme">
+      <button class="btn btn-outline-primary active" data-filter="all">All</button>
+      <button class="btn btn-outline-primary" data-filter="BSCS">BSCS</button>
+      <button class="btn btn-outline-primary" data-filter="BSSE">BSSE</button>
+      <button class="btn btn-outline-primary" data-filter="BBA">BBA</button>
+    </div>
+    <p id="count" class="fw-semibold"></p>
+    <ul id="directory" class="list-group">
+      <li class="list-group-item" data-programme="BSCS">Ayesha Khan – BSCS</li>
+      <li class="list-group-item" data-programme="BSSE">Bilal Ahmed – BSSE</li>
+      <li class="list-group-item" data-programme="BBA">Fatima Noor – BBA</li>
+      <li class="list-group-item" data-programme="BSCS">Hamza Ali – BSCS</li>
+      <li class="list-group-item" data-programme="BSCS">Zainab Raza – BSCS</li>
+      <li class="list-group-item" data-programme="BBA">Usman Tariq – BBA</li>
+      <li class="list-group-item" data-programme="BSSE">Mehwish Iqbal – BSSE</li>
+      <li class="list-group-item" data-programme="BSCS">Daniyal Shah – BSCS</li>
+    </ul>
+    <div id="none" class="alert alert-warning mt-3">No students match your search.</div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      let programme = 'all';                       // current button filter
+      const total = $('#directory li').length;
+
+      // One function checks BOTH conditions for every item
+      function applyFilters() {
+        const term = $('#search').val().trim().toLowerCase();
+        let shown = 0;
+        $('#directory li').each(function () {
+          const $li = $(this);
+          const okName = $li.text().toLowerCase().includes(term);
+          const okProg = programme === 'all' || $li.data('programme') === programme;
+          $li.toggle(okName && okProg);            // show or hide
+          if (okName && okProg) shown++;
+        });
+        $('#count').text(`${shown} of ${total} students`);
+        $('#none').toggle(shown === 0);
+      }
+
+      $('#search').on('input', applyFilters);
+      // Delegated: one handler on the group serves all four buttons
+      $('#filters').on('click', 'button', function () {
+        programme = $(this).data('filter');
+        $(this).addClass('active').siblings().removeClass('active');
+        applyFilters();
+      });
+      applyFilters();
+    });
+  </script>
+</body>
+</html>
