@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karachi Times – Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>.story-img { height: 180px; }</style>
+</head>
+<body>
+  <!-- Navbar collapses below lg -->
+  <nav class="navbar navbar-expand-lg bg-body border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="#">Karachi Times</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#kt" aria-controls="kt" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="kt">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">City</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sport</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Tech</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breaking bar: text-truncate prevents horizontal scrolling -->
+  <div class="bg-danger text-white">
+    <div class="container d-flex gap-2 py-2 align-items-center">
+      <span class="badge text-bg-light text-danger flex-shrink-0">BREAKING</span>
+      <span class="text-truncate">Heavy rain expected across the city this weekend; schools announce early closing on Friday afternoon</span>
+    </div>
+  </div>
+
+  <main class="container py-4">
+    <!-- Ad banner: laptops only -->
+    <div class="d-none d-lg-block bg-body-tertiary border text-center py-3 mb-4 small text-body-secondary">Advertisement · 970 × 90</div>
+
+    <div class="row g-4">
+      <!-- Lead story: 8 cols on lg -->
+      <article class="col-lg-8">
+        <img src="https://picsum.photos/id/1067/1200/675" class="img-fluid rounded mb-3" width="1200" height="675" alt="Port with container ships">
+        <h1 class="h2">Port traffic hits a record high as exports recover</h1>
+        <p class="lead">Shipping volumes rose sharply this quarter, officials said, as textile and rice exports picked up.</p>
+      </article>
+
+      <!-- Most read: beside the lead on lg; below the story grid on smaller screens -->
+      <aside class="col-lg-4 order-last order-lg-0">
+        <div class="card">
+          <div class="card-header fw-bold">Most read</div>
+          <ol class="list-group list-group-flush list-group-numbered">
+            <li class="list-group-item">New bus route links Saddar to Malir</li>
+            <li class="list-group-item">University admissions open next week</li>
+            <li class="list-group-item">Local startup raises seed funding</li>
+            <li class="list-group-item">Cricket: home side wins thriller</li>
+          </ol>
+        </div>
+      </aside>
+
+      <!-- Story grid: 1 / 2 / 3 per row -->
+      <section class="col-12">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><article class="card h-100">
+            <img src="https://picsum.photos/id/1011/600/400" class="card-img-top story-img object-fit-cover" alt="Boat on a lake" loading="lazy">
+            <div class="card-body"><h2 class="h5 card-title">Lake clean-up drive draws hundreds</h2></div></article></div>
+          <div class="col"><article class="card h-100">
+            <img src="https://picsum.photos/id/1005/600/400" class="card-img-top story-img object-fit-cover" alt="Young developer at work" loading="lazy">
+            <div class="card-body"><h2 class="h5 card-title">Coding bootcamps see record sign-ups</h2></div></article></div>
+          <div class="col"><article class="card h-100">
+            <img src="https://picsum.photos/id/1018/600/400" class="card-img-top story-img object-fit-cover" alt="Mountain landscape" loading="lazy">
+            <div class="card-body"><h2 class="h5 card-title">Northern tourism season opens early</h2></div></article></div>
+          <div class="col"><article class="card h-100">
+            <img src="https://picsum.photos/id/1060/600/400" class="card-img-top story-img object-fit-cover" alt="Barista making coffee" loading="lazy">
+            <div class="card-body"><h2 class="h5 card-title">Café culture booms in Clifton</h2></div></article></div>
+          <div class="col"><article class="card h-100">
+            <img src="https://picsum.photos/id/1070/600/400" class="card-img-top story-img object-fit-cover" alt="Empty road" loading="lazy">
+            <div class="card-body"><h2 class="h5 card-title">Expressway extension approved</h2></div></article></div>
+          <div class="col"><article class="card h-100">
+            <img src="https://picsum.photos/id/1076/600/400" class="card-img-top story-img object-fit-cover" alt="City street at night" loading="lazy">
+            <div class="card-body"><h2 class="h5 card-title">Night markets return after renovation</h2></div></article></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="border-top py-3 text-center small text-body-secondary">&copy; 2026 Karachi Times (demo)</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
