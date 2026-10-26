@@ -1,0 +1,7 @@
+# netlify.toml – optional: deploy with Netlify instead of GitHub Pages
+[build]
+  command = "npm test"     # the deploy fails (and nothing is published) if tests fail
+  publish = "site"
+
+[context.deploy-preview]
+  command = "npm test"     # every pull request gets its own preview URL
