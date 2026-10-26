@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="533" viewBox="0 0 800 533" role="img" aria-label="Series circuit diagram">
+  <rect width="800" height="533" fill="#eff6ff"/>
+  <rect x="150" y="120" width="500" height="300" fill="none" stroke="#1e3a8a" stroke-width="8"/>
+  <rect x="360" y="100" width="80" height="40" fill="#fcd34d" stroke="#1e3a8a" stroke-width="4"/>
+  <circle cx="650" cy="270" r="40" fill="#ffffff" stroke="#1e3a8a" stroke-width="6"/>
+  <text x="635" y="282" font-family="sans-serif" font-size="34" fill="#1e3a8a">A</text>
+  <line x1="150" y1="250" x2="150" y2="290" stroke="#ea580c" stroke-width="16"/>
+  <text x="300" y="480" font-family="sans-serif" font-size="30" fill="#1e3a8a">V = I × R</text>
+</svg>
