@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="533" viewBox="0 0 800 533" role="img" aria-label="Maths past paper">
+  <rect width="800" height="533" fill="#f5f3ff"/>
+  <rect x="220" y="40" width="360" height="460" rx="8" fill="#ffffff" stroke="#a78bfa" stroke-width="4"/>
+  <text x="250" y="100" fill="#1f2937" font-family="sans-serif" font-size="28">Paper 2 – Calculus</text>
+  <text x="250" y="160" fill="#374151" font-family="sans-serif" font-size="22">1. Differentiate y = 3x³</text>
+  <text x="250" y="210" fill="#374151" font-family="sans-serif" font-size="22">2. Integrate 4x dx</text>
+  <text x="250" y="260" fill="#ea580c" font-family="sans-serif" font-size="22">dy/dx = 9x²  ✓</text>
+</svg>
