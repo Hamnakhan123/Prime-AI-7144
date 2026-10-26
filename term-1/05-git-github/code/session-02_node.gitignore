@@ -1,0 +1,26 @@
+# ---- Dependencies ----
+node_modules/
+
+# ---- Build output ----
+dist/
+build/
+.cache/
+
+# ---- Logs ----
+*.log
+npm-debug.log*
+
+# ---- Environment / secrets (NEVER commit) ----
+.env
+.env.*
+!.env.example
+
+# ---- Editors and OS ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- Test coverage ----
+coverage/
