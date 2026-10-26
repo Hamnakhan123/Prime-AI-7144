@@ -1,0 +1,10 @@
+{
+  "name": "seo-module-code",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node.js SEO tools for the SEO module. Run npm install once, then node <file>.js",
+  "license": "MIT",
+  "dependencies": {
+    "jsdom": "24.1.3"
+  }
+}
