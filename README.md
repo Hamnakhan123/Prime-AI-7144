@@ -28,7 +28,7 @@ flowchart LR
 1. [Effective Productivity through Office Automation](term-1/01-office-automation/README.md)
 2. [Progressive Website Development (HTML5, CSS3, JavaScript)](term-1/02-progressive-website-development/README.md)
 3. [Bootstrap & jQuery for Responsive Web Pages](term-1/03-bootstrap-jquery/README.md)
-4. Optimize Web for Search Engines — *coming soon*
+4. [Optimize Web for Search Engines](term-1/04-seo/README.md)
 5. Distributed Version Control with Git & GitHub — *coming soon*
 6. Term 1 Capstone Project — *coming soon*
 
