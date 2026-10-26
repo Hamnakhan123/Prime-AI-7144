@@ -1,0 +1,15 @@
+{
+  "name": "term1-capstone-starter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Starter code for the Term 1 Capstone Project (HTML5, CSS3, JavaScript, Bootstrap, jQuery)",
+  "scripts": {
+    "check": "node tools/check-site.js",
+    "test": "node tools/behaviour-test.js"
+  },
+  "devDependencies": {
+    "jquery": "3.7.1",
+    "jsdom": "24.1.3"
+  },
+  "license": "MIT"
+}
