@@ -1,0 +1,10 @@
+[
+  {"source": "parentsguide.pk/best-tutors", "anchor": "Karachi Tutors", "relevant": true, "authority": 42, "placement": "content", "rel": "follow", "paid": false, "spam": false},
+  {"source": "schoolnews.pk/exam-season", "anchor": "study tips for O Level", "relevant": true, "authority": 55, "placement": "content", "rel": "follow", "paid": false, "spam": false},
+  {"source": "karachi-directory.pk/education", "anchor": "karachitutors.pk", "relevant": true, "authority": 30, "placement": "sidebar", "rel": "nofollow", "paid": false, "spam": false},
+  {"source": "edu-forum.pk/thread/9921", "anchor": "physics tutor", "relevant": true, "authority": 25, "placement": "content", "rel": "ugc", "paid": false, "spam": false},
+  {"source": "techblog.example.com/sponsor", "anchor": "maths tuition karachi", "relevant": false, "authority": 60, "placement": "footer", "rel": "follow", "paid": true, "spam": false},
+  {"source": "free-links-4u.example.net", "anchor": "physics tuition karachi", "relevant": false, "authority": 3, "placement": "footer", "rel": "follow", "paid": false, "spam": true},
+  {"source": "community-library.pk/partners", "anchor": "Karachi Tutors home tuition", "relevant": true, "authority": 35, "placement": "content", "rel": "follow", "paid": false, "spam": false},
+  {"source": "instagram.com/karachitutors", "anchor": "https://karachitutors.pk", "relevant": true, "authority": 90, "placement": "sidebar", "rel": "nofollow", "paid": false, "spam": false}
+]
