@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="Placeholder image">
+  <rect width="800" height="500" fill="#ede9fe"/>
+  <rect x="250" y="140" width="300" height="220" rx="16" fill="none" stroke="#6d28d9" stroke-width="8"/>
+  <circle cx="330" cy="215" r="28" fill="#f59e0b"/>
+  <path d="M270 340 L370 260 L440 310 L490 270 L530 340 Z" fill="#6d28d9"/>
+  <text x="400" y="430" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#4c1d95">Replace with your own image</text>
+</svg>
